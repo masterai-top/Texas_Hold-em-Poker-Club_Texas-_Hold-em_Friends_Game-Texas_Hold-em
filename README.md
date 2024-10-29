@@ -3,3 +3,4 @@
 ![大厅01](https://github.com/user-attachments/assets/9d39d87b-30b3-43b3-aa56-22992c099621)
 ![02](https://github.com/user-attachments/assets/2d76cdf5-e08a-4f8a-b7d6-1de946c59b47)
 ![俱乐部13](https://github.com/user-attachments/assets/e027efdf-084a-4546-a0fb-268d9161a1f9)
+![牌桌-胜利提示](https://github.com/user-attachments/assets/ec614e58-66ca-4d13-92ba-b49b01c134e6)
