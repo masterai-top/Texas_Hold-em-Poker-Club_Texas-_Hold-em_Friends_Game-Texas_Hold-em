@@ -1,0 +1,34 @@
+#include "/home/tarsproto/XGame/Comm/JFGame.tars"
+#include "LotteryProto.tars"
+#include "ActivityProto.tars"
+module activity
+{
+	interface ActivityServant
+	{
+		//TCP请求处理接口
+		int onRequest(long lUin, string sMsgPack, string sCurServrantAddr, JFGame::TClientParam stClientParam, JFGame::UserBaseInfoExt stUserBaseInfo);
+
+		/******************************转盘****************************/
+
+		int lotteryGo(lottery::LotteryReq req, out lottery::LotteryResp resp);
+
+    	int queryLotteryDetail(lottery::QueryLotteryDetailReq req, out lottery::QueryLotteryDetailResp resp);
+
+    	 //上报成就信息
+        int reportAchievementInfo(long lUin, int iRank, long lRewardNum, int BetID, int iCondition);
+        //获取成就信息
+        int getAchievementInfo(long lUin, out map<int, long> mapAchievementInfo);
+        //上报赛季输赢
+        int reportLeagueStat(long lUin, long lWinNum, long lPumpNum);
+        //获取赛季信息
+        int getLeagueInfo(long lUin);
+		//上报宝箱进度
+		int reportBoxProgressRate(Box::BoxProgressRateReq req, out Box::BoxProgressRateResp resp);
+		//查询宝箱信息
+		int queryBox(Box::QueryBoxReq req, out Box::QueryBoxResp resp);
+
+		//查询转盘信息
+		int queryLuckeyWheel(long lUin, out LuckeyWheel::QueryLuckeyWheelResp resp);
+	};
+
+}; 

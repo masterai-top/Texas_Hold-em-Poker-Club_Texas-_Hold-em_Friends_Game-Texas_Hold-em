@@ -1,0 +1,80 @@
+module Box
+{
+    enum PRECIOUS_BOX_TYPE
+    {
+        E_PRECIOUS_BOX_BIGEN            = 0,    // 
+        E_PRECIOUS_BOX_LEVEL_1          = 1,    // 宝箱等级1
+        E_PRECIOUS_BOX_LEVEL_2          = 2,    // 宝箱等级2
+        E_PRECIOUS_BOX_LEVEL_3          = 3,    // 宝箱等级3
+        E_PRECIOUS_BOX_LEVEL_4          = 4,    // 宝箱等级4
+        E_PRECIOUS_BOX_LEVEL_5          = 5,    // 宝箱等级5
+        E_PRECIOUS_BOX_LEVEL_6          = 6,    // 宝箱等级6
+        E_PRECIOUS_BOX_LEVEL_7          = 7,    // 宝箱等级7
+        E_PRECIOUS_BOX_LEVEL_8          = 8,    // 宝箱等级8
+        E_PRECIOUS_BOX_LEVEL_9          = 9,    // 宝箱等级9
+        E_PRECIOUS_BOX_END              = 10,   //
+    };
+    
+    struct RewardProps
+    {
+        0 require int propsID;
+        1 require long number;
+    };
+
+    struct BoxInfo
+    {
+        0 require int number;
+        1 require int todayNumber;
+        2 require int progressRate;
+    };
+
+    //上报宝箱进度
+    struct BoxProgressRateReq
+    {
+        0 require long uid;//
+        1 require int betId;//场次id
+        2 require long progressRate; //进度
+    };
+    struct BoxProgressRateResp
+    {
+        0 require int resultCode;//结果码
+    };
+
+    //查询宝箱
+    struct QueryBoxReq
+    {
+        0 require long uid;
+        1 require int betId;//-1:所有的
+    };
+    struct QueryBoxResp
+    {
+        0 require map<int, BoxInfo> mapBox; //key:betId, value:数量
+        1 require int totalNumber;
+        2 require int totalTodayNumber;
+        3 require int resultCode;//结果码
+    };
+
+    //领取宝箱奖励
+    struct BoxRewardReq
+    {
+        0 require long uid;
+        1 require int betId;//-1:所有的
+    };
+
+    struct BoxRewardResp
+    {
+        0 require vector<RewardProps> rewards; //奖励
+        1 require int resultCode;//结果码
+    };
+}; 
+
+module LuckeyWheel
+{
+    struct QueryLuckeyWheelResp
+    {
+        0 require long cdTime; //冷却时间剩余秒数
+        1 require bool firstRecharge;//是否首次购买
+        2 require long lootCount;//剩余付费抽卡次数
+        3 require int resultCode;//结果码       
+    };
+};

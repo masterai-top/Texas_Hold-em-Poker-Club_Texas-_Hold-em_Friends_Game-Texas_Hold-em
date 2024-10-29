@@ -1,0 +1,51 @@
+
+module lottery
+{
+    enum E_LOTTERY_TYPE
+    {
+        E_LOTTERY_NONE          = 0,    //
+        E_LOTTERY_FREE          = 1,    // 免费旋转
+        E_LOTTERY_SUPER         = 99,    // 超级旋转
+        E_LOTTERY_LOOP          = 2,    // 循环旋转
+        E_LOTTERY_FIRST_TIME    = 3,    // 首次旋转
+    };
+
+    struct LotteryReq
+    {
+        0 require E_LOTTERY_TYPE    rotateType;//旋转类型
+        1 require long              uid;
+    };
+
+    struct LotteryResp
+    {
+        0 require int resultCode   ;//结果码
+        1 require int rewardId     ;//奖品ID
+    };
+
+    // 查询转盘信息发空包
+
+    struct RewardItem
+    {
+        0 require int goodsID  ;    //物品ID
+        1 require int count    ;    //物品数量
+        2 require int rewardId ;    //奖品ID
+    };
+
+    struct QueryLotteryDetailReq
+    {
+        0 require long uid;
+    };
+
+    struct QueryLotteryDetailResp
+    {
+        0 require int               resultCode              ;    // 错误码
+        1 require int               freeRotateTimes         ;    //免费旋转次数
+        2 require int               cooldown                ;    //冷却时间 -- CD
+        3 require int               superNeedFreeTimes      ;   // 超级选择需要的免费旋转次数
+        4 require E_LOTTERY_TYPE    rotateType              ;    //旋转类型
+        5 require vector<RewardItem> rewardPool            ;    //奖池
+        6 require string             icon                   ;   //ICON
+        7 require string             cartoon                ;   //动态                       
+    };
+
+}; 
