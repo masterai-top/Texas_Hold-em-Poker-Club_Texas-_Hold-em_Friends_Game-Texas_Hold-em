@@ -1,6 +1,16 @@
 # 德州扑克源码， 出售德州扑克代码
 德州扑克代码，德州俱乐部源代码，线上成功运营的德州产品，刚刚下架，全套代码资源。支持德州俱乐部+德州私人局，也有大联盟模式，德扑圈hhpoker和pppoker同类产品，产品质量远超德扑圈，1:1，usdt支付，游戏大厅中有：德州扑克/6+短牌/奥马哈/大菠萝/MTT/SNG/AOF/德州牛仔 ，可以边打牌边语音聊天，也有专门的高端视频房.支持多种国家语言，完整的一套代码，前端代码，后端代码以及代理和运营后台，有意者请加:Telegram✈:@xuzongbin001;或E-mail：masterai918@gmail.com；
 
+Câu lạc bộ Texas Hold'em, bàn chơi riêng tư, bàn bạn bè, trò chơi poker Texas Hold'em, mã nguồn poker Texas Hold'em, trò chơi poker Texas Hold'em, mã nguồn trò chơi poker Texas Hold'em.
+
+Sản phẩm tinh xảo, chất lượng mã nguồn đáng tin cậy.
+
+Bao gồm nhiều thể loại chơi poker Texas như: SNG, MTT, Texas cổ điển, Pineapple lớn, Short Deck và 7–8 kiểu chơi khác.
+
+Có liên minh, trò chuyện thoại.
+
+Liên hệ qua Telegram: @xuzongbin001
+
 
 
 
